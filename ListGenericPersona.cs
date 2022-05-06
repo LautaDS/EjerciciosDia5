@@ -17,6 +17,7 @@ namespace EjerciciosDia5
         public bool SonTodosMayoresDeEdad()
         {
             bool flagMenores = false;
+            int contadorMenores = 0;
             if (lista.Count > 0)
             {
                 foreach (T person in lista)
@@ -24,12 +25,18 @@ namespace EjerciciosDia5
 
                     if(person.Edad < 18)
                     {
-                        return flagMenores = true;
+                        contadorMenores++;
                     } 
                 }
             }
-          
-            return !flagMenores;
+          if(contadorMenores > 0)
+            {
+                return false;
+
+            }else
+            {
+                return true;
+            }
         }
     }
 }
