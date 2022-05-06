@@ -6,10 +6,10 @@ namespace EjerciciosDia5
     {
         static void Main(string[] args)
         {
-            Persona persona = new Persona();
-            Estudiante estudiante = new Estudiante(18);
+            Persona persona = new Persona(20);
+            Estudiante estudiante = new Estudiante(20);
             Profesor profesor = new Profesor(33);
-
+            ListGenericPersona<Persona> listaDePersonas = new ListGenericPersona<Persona>();
             persona.Saludar();
             estudiante.Saludar();
             estudiante.VerEdad();
@@ -19,6 +19,18 @@ namespace EjerciciosDia5
             profesor.Explicar();
 
             Console.ReadLine();
+
+            listaDePersonas.AddPerson(persona);
+            listaDePersonas.AddPerson(profesor);
+            listaDePersonas.AddPerson(estudiante);
+
+            if(listaDePersonas.SonTodosMayoresDeEdad())
+            {
+                Console.WriteLine("Son todos mayores de edad");
+            } else
+            {
+                Console.WriteLine("No todos son mayores de edad");
+            }
         }
     }
 }

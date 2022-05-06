@@ -13,7 +13,7 @@ namespace EjerciciosDia5
 
         public Persona()
         {
-
+            edad = 1;
         }
         public Persona(int edad)
         {

@@ -17,6 +17,7 @@ namespace EjerciciosDia5
 
         public Profesor(string nombre) : base(nombre)
         {
+
         }
 
         public Profesor(int edad, string nombre) : base(edad, nombre)
